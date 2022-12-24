@@ -1,6 +1,7 @@
 import Video from "./components/Video";
 import "./App.css";
 import VideoFooter from "./components/VideoFooter";
+import VideoSidebar from "./components/VideoSidebar";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <Video />
         <Video />
         <VideoFooter />
+        <VideoSidebar />
       </div>
     </div>
   );
