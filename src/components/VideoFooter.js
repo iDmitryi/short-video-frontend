@@ -2,18 +2,18 @@ import { MusicNote } from "../../node_modules/@mui/icons-material/index";
 // import Ticker from "../../node_modules/react-ticker/types/index";
 import "./VideoFooter.css";
 
-const VideoFooter = () => {
+const VideoFooter = ({ chanel, description, song }) => {
   return (
     <div className="videoFooter">
       <div className="videoFooter__text">
-        <h3>@iDmitryi</h3>
-        <p>Macbook Air to new Windows editing beast</p>
+        <h3>@{chanel}</h3>
+        <p>{description}</p>
         <div className="videoFooter__ticker">
           <MusicNote className="videoFooter__icon" />
           {/* <Ticker mode="smooth">
             {({ index }) => (
               <>
-                <p>I'm a Linux PC</p>
+                <p>{song}</p>
               </>
             )}
           </Ticker> */}

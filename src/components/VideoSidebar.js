@@ -7,7 +7,7 @@ import {
 } from "../../node_modules/@mui/icons-material/index";
 import "./VideoSidebar.css";
 
-const VideoSidebar = () => {
+const VideoSidebar = ({ likes, shares, messages }) => {
   const [liked, setLiked] = useState(false);
   return (
     <div className="videoSidebar">
@@ -18,16 +18,16 @@ const VideoSidebar = () => {
           ) : (
             <FavoriteBorder fontSize="large" onClick={(e) => setLiked(true)} />
           )}
-          <p>{liked ? 101 : 100}</p>
+          <p>{liked ? likes + 1 : likes}</p>
         </>
       </div>
       <div className="videoSidebar__button">
         <Message fontSize="large" />
-        <p>345</p>
+        <p>{messages}</p>
       </div>
       <div className="videoSidebar__button">
         <Share fontSize="large" />
-        <p>109</p>
+        <p>{shares}</p>
       </div>
     </div>
   );
